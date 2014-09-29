@@ -1,12 +1,12 @@
 ﻿<SettingsFlyout
-    x:Class="ClickTheStopButton.AppSettings"
+    x:Class="ClickTheStopButton.Help"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ClickTheStopButton"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Title="Settings"
+    Title="Help"
     d:DesignWidth="346">
 
     <!-- This StackPanel acts as a root panel for vertical layout of the content sections -->
@@ -18,16 +18,16 @@
         <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
 
             <!-- Section 1 header -->
-            <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
-                <TextBlock Text="Toggle Switch" Style="{StaticResource TitleTextBlockStyle}"/>
-                <TextBlock Margin="0,0,0,25" Text="Use toggle switches to let users set Boolean values." Style="{StaticResource BodyTextBlockStyle}"/>
-                <ToggleSwitch Margin="-6,0,0,0" Header = "Download updates automatically" HorizontalAlignment="Left" HorizontalContentAlignment="Left"/>
-                <ToggleSwitch Margin="-6,0,0,0" Header = "Install updates automatically" HorizontalAlignment="Stretch"/>
-                <Button Margin="-3,0,0,0" Content="Clear"/>
-            </StackPanel>
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="How to Play" />
+
             <!-- Section 1 body -->
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" TextWrapping="Wrap" FontFamily="Global User Interface">
+                <TextBlock.Text>Press the start/reset button. The game will give you 6 seconds to prepare yourself to stop at the timing that is provided at the top right hand corner in gold.
+                When the clock reaches 0, the time will start. Stop at when you think is the correct time. If the timing stopped matches that of the one on the top right hand corner, you win!</TextBlock.Text>
+            </TextBlock>
 
         </StackPanel>
+        <HyperlinkButton x:Name="hybAd" Content="Advertistment License" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="hybAd_Click" NavigateUri="https://choice.microsoft.com/AdvertisementChoice/"/>
 
         <!-- Define more Content Sections below as necessary -->
 

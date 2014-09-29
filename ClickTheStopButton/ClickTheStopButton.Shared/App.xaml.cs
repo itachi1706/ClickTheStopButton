@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.ApplicationSettings;
+using Windows.System;
 
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 
@@ -145,12 +146,25 @@ namespace ClickTheStopButton
 
             args.Request.ApplicationCommands.Add(new SettingsCommand(
                 "AppSettings", "Settings", (handler) => ShowAppSettingsFlyout()));
+            args.Request.ApplicationCommands.Add(new SettingsCommand(
+                "Help", "Help", (handler) => ShowHelpFlyout()));
         }
 
         public void ShowAppSettingsFlyout()
         {
             AppSettings AppSettingsFlyout = new AppSettings();
             AppSettingsFlyout.Show();
+        }
+
+        public void ShowHelpFlyout()
+        {
+            Help HelpFlyout = new Help();
+            HelpFlyout.Show();
+        }
+
+        public async void LaunchAdsPrivacy()
+        {
+            await Launcher.LaunchUriAsync(new Uri("https://choice.microsoft.com/AdvertisementChoice/"));
         }
     }
 }
