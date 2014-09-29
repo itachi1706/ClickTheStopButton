@@ -13,7 +13,7 @@
         <UI:AdControl ApplicationId="067f5c97-d883-4c49-8121-6f5b9251ae45" AdUnitId="190721" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="728"/>
         <TextBlock x:Name="txtResults" HorizontalAlignment="Left" Margin="0,464,0,0" TextWrapping="Wrap" Text="Press the Start Button!" VerticalAlignment="Top" FontSize="72" TextAlignment="Center" Width="1356"/>
         <TextBlock x:Name="txtStopwatch" HorizontalAlignment="Left" Margin="526,208,0,0" TextWrapping="Wrap" Text="0:00:00:00" VerticalAlignment="Top" FontSize="72"/>
-        <TextBlock x:Name="txtPrompt" HorizontalAlignment="Left" Margin="1092,87,0,0" TextWrapping="Wrap" Text="Stop at this time!" VerticalAlignment="Top" FontSize="20" Visibility="Visible" Foreground="White"/>
+        <TextBlock x:Name="txtPrompt" HorizontalAlignment="Left" Margin="1092,87,0,0" TextWrapping="Wrap" Text="Stop at this time!" VerticalAlignment="Top" FontSize="20" Visibility="Collapsed" Foreground="White"/>
         <TextBlock x:Name="txtTime" HorizontalAlignment="Left" Margin="1092,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="42"/>
         <Button x:Name="btnStopClock" Content="Stop The Clock!" HorizontalAlignment="Left" Margin="578,300,0,0" VerticalAlignment="Top" FontFamily="Global User Interface" FontSize="24" Click="btnStopClock_Click" Visibility="Collapsed" IsEnabled="False"/>
         <Button x:Name="btnReset" Content="Start!" HorizontalAlignment="Left" Margin="626,376,0,0" VerticalAlignment="Top" FontFamily="Global User Interface" FontSize="24" Click="btnReset_Click"/>
